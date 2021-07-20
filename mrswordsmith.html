@@ -1,0 +1,313 @@
+<html>
+<head>
+<title>PHONIC</title>
+<script>
+(function(window, document, undefined){
+var arr = {
+	'701' : 'bag',
+	'702': 'bat',
+	'703' : 'bed',
+	'704': 'bib',
+	'705' : 'bin',
+	'706': 'box',
+	'707': 'cab',
+	'708' : 'can',
+	'709': 'cat',
+	'710': 'cod',
+	'711': 'cup',
+	'712': 'dad',
+	'713': 'dig',
+	'714': 'dip',
+	'715': 'dot',
+	'716' : 'fab',
+	'717' : 'fan',
+	'718' : 'fat',
+	'719': 'fed',
+	'722' : 'fix',
+	'720': 'fib',
+	'721': 'fig',
+	'722': 'fix',
+	'723': 'fog',
+	'724': 'fun',
+	'725': 'had',
+	'727': 'hen',
+	'726':'hat',
+	'727':'hen',
+	'728': 'hop',
+	'729' : 'hug',
+	'730' : 'jet',
+	'731': 'job',
+	'732': 'jug',
+	'733': 'lid',
+	'734' : 'lip',
+	'735': 'lot',
+	'736': 'man',
+	'737': 'map',
+	'738': 'mat',
+	'739': 'mug',
+	'740': 'nag',
+	'741': 'nap',
+	'742': 'nod',
+	'743': 'not',
+	'744': 'nun',
+	'745': 'pad',
+	'746' : 'pan',
+	'747': 'pig',
+	'748': 'pit',
+	'749': 'pop',
+	'750' : 'pot',
+	'751': 'ran',
+	'752' : 'rat',
+	'753': 'red',
+	'754': 'rip',
+	'755': 'rub',
+	'756': 'rug',
+	'757': 'run',
+	'758': 'sad',
+	'759': 'sip',
+	'760': 'sit',
+	'761': 'six',
+	'762': 'sob',
+	'763': 'sun',
+	'764': 'tag',
+	'765': 'tap',
+	'766' : 'tax',
+	'767' : 'tin',
+	'768': 'top',
+	'769': 'tug',
+	'770': 'van',
+	'771':'vet',
+	'772': 'wag',
+	'773': 'wax',
+	'774': 'web',
+	'775': 'wet',
+	'776' : 'win',
+	'777':'beat',
+	'778':'beef',
+	'779':'been',
+	'780':'boat',
+	'781' : 'boil',
+	'782':'boom',
+	'783':'boot',
+	'784':'coin',
+	'785':'fail',
+	'786':'feel',
+	'787':'feet',
+	'788':'fight',
+	'789':'foam',
+	'790':'foil',
+	'791':'food',
+	'792':'fool',
+	'793':'gain',
+	'794':'goal',
+	'795':'goat',
+	'796':'hail',
+	'797':'heat',
+	'798':'heel',
+	'799':'hoop',
+	'800':'lead',
+	'801':'leaf',
+	'802':'leek',
+	'803':'light',
+'804':'loaf',
+'805' : 'loan',
+'806' : 'loot',
+'807' : 'mail',
+'808' : 'main',
+'809':'mean',
+'810' : 'meet',
+'811' : 'might',
+'812' : 'moan',
+'813' : 'moat',
+'814' : 'moon',
+'815' : 'nail',
+'816' : 'neat',
+'817' : 'need',
+'818' : 'night',
+'819' : 'noon',
+'820' : 'paid',
+'821' : 'pain',
+'822' : 'peel',
+'823' : 'peep',
+'824' : 'pool',
+'825' : 'rail',
+'826' : 'rain',
+'827' : 'read',
+'828' : 'reek',
+'829' : 'reel',
+'830' : 'right',
+
+	'831' : 'road',
+	'832':'roam',
+'833':'roof',
+'834':'room',
+'835':'root',
+'836':'sail',
+'837':'seat',
+'838':'seed',
+'839':'seem',
+'840':'seen',
+'841':'sight',
+'842':'soak',
+'843':'soap',
+'844':'soil',
+'845':'soon',
+'846':'tail',
+'847':'teen',
+'848':'tight',
+'849':'toil',
+'850':'tool',
+
+	'851' : 'back',
+	'852' : 'beach',
+	'853' : 'bus',
+	'854' : 'catch',
+	'855' : 'chat',
+	'856' : 'chess',
+	'857' : 'chill',
+	'858' : 'chin',
+	'859' : 'chuck',
+	'860' : 'cuff',
+	'861' : 'ditch',
+	'862' : 'duck',
+	'863' : 'dull',
+	'864' : 'feel',
+	'865' : 'fetch',
+	'866' : 'fuss',
+	'867' : 'hail',
+	'868' : 'hatch',
+	'869' : 'hill',
+	'870' : 'hiss',
+	'871' : 'duff',
+	'872' : 'jail',
+	'873' : 'jam',
+	'874' : 'keen',
+	'875' : 'kick',
+	'876' : 'kiss',
+	'877' : 'lean',
+	'878' : 'leech',
+	'879' : 'less',
+	'880' : 'luck',
+	'881' : 'lull',
+	'882' : 'meal',
+	'883' : 'mess',
+	'884' : 'mill',
+	'885' : 'mock',
+	'886' : 'much',
+	'887' : 'patch',
+	'888' : 'pick',
+	'889' : 'puff',
+	'890' : 'queen',
+	'891' : 'quick',
+	'892' : 'quill',	
+	'893' : 'quit',
+	'894' : 'rail',
+	'895' : 'real',
+	'896' : 'reel',
+	'897' : 'rich',
+	'898' : 'rock',
+	'899' : 'sat',
+	'889' : 'puff',
+	'894' : 'rail',	
+	'900' : 'seal',
+	'901' : 'seen',
+	'902' : 'sell',
+	'903' : 'shell',
+	'904' : 'sin',
+	'905' : 'shock',
+	'906' : 'shot',
+	'907' : 'sock',
+	'908' : 'such',
+	'909' : 'tail',
+	'910' : 'teach',
+	'911' : 'tell',
+	'912' : 'thatch',
+	'913' : 'thick',
+	'914' : 'thin',
+	'915' : 'tick',
+	'916' : 'toss',
+	'917' : 'wail',
+	'918' : 'wait',
+	'919' : 'whack',
+	'920' : 'wheel',
+	'921' : 'when',
+	'922' : 'whiff',
+	'923' : 'wick',
+	'924' : 'will'
+};
+
+window.onload = init;
+
+  function init(){
+	var i1 = document.getElementById("i1");
+	var i2 = document.getElementById("i2");
+	var i3 = document.getElementById("i3");
+	var iw = document.getElementById("iw");
+	var e1, e2, e3;
+	var audio = document.getElementById("audio");
+	
+	i1.addEventListener('keydown', e=>{
+		i1.value = e.key;
+		e1 = i1.value;
+		e.preventDefault();
+		i2.focus();
+	});
+	i2.addEventListener('keydown',  e=>{
+		i2.value = e.key;
+		e2 = i2.value;
+		e.preventDefault();
+		i3.focus();
+	});
+	i3.addEventListener('keydown',  e=>{
+		i3.value = e.key;
+		e3 = i3.value;
+		if (arr[e1 + e2 + e3]){
+			iw.value = arr[e1 + e2 + e3];
+			e.preventDefault();
+			play();
+		} else {
+			iw.value = "";
+		}
+	});
+	iw.addEventListener('keypress',  e=> {
+		if (e.keyCode == 13){
+			play();
+		}
+	});
+	document.getElementById('play').addEventListener('click', e=> play());
+	
+	var play=()=>{
+		var val = iw.value.toLowerCase().trim();
+		document.getElementById("text").innerText = val;
+		if (val){
+			var t = getKeyByValue(arr, val);
+			if (t){ i1.value = t[0];i2.value = t[1];i3.value = t[2]; }
+			audio.src = "https://qr-codes-mrswordsmith.s3-us-west-2.amazonaws.com/" + val + "_UK_ph.mp3";
+			audio.play();
+		}
+	};
+  }
+})(window, document, undefined);
+
+function getKeyByValue(object, value) {
+  return Object.keys(object).find(key => object[key] === value);
+}
+</script>
+</head>
+<body style="margin:20px">
+	<div class="wrap">
+		<div>
+			<input type="number" id="i1" maxlength="1" min="0" max="9" style="width:40px;font-size:32px;"/>
+			<input type="number" id="i2" maxlength="1" min="0" max="9" style="width:40px;font-size:32px;"/>
+			<input type="number" id="i3" maxlength="1" min="0" max="9" style="width:40px;font-size:32px;"/><br><br><br>
+			<input type="text" id="iw" style="width: 180px;font-size:32px;font-weight:bold;"/>&nbsp;
+			<input type="button" id="play" value="&#9658;" style="width: 60px; height:60px;font-size:32px"/>
+		</div>
+		<div style="height: 90px; width=10px"> </div>
+		<div style="font-size: 128px;font-weight: bold;width: 360px;height: 360px;border-radius: 200px;border: 1px solid black;display: flex;justify-content: center;align-items: center;"><div class="text" id="text"></div></div>
+		<audio id="audio" controls>
+		  <source src="" type="audio/mpeg">
+		</audio>
+	</div>
+</body>
+</html>
